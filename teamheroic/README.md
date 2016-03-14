@@ -12,3 +12,6 @@
   I chose to use Angular Material, because after using the chrome tools to investigate
   the demo login you gave me, I saw that is how you build your web app. I wanted
   to match the design to your site.  
+
+# Deployed test site
+[firebase site](https://trainheroic.firebaseapp.com/)
