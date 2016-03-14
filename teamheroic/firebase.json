@@ -1,0 +1,7 @@
+{
+  "firebase": "trainheroic",
+  "public": ".",
+  "ignore": [
+    "firebase.json"
+  ]
+}
