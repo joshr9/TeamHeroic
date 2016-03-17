@@ -1,11 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+  <title>Leaderboard</title>
 </head>
 
-<body ng-app="leaderboard" ng-controller="leaderboardController" layout="column" layout-align="top center" ng-cloak>
+<body ng-app="leaderboard" ng-controller="leaderboardController" layout="column"  ng-cloak>
 
   <md-toolbar>
     <div class="md-toolbar-tools">
@@ -13,21 +17,45 @@
     </div>
   </md-toolbar>
 
-  <div class='md-padding' layout="column" layout-wrap layout-align-xl="center center">
-    <md-card ng-repeat="person in people" ng-if="tracker <= $index && $index < interval">
-      <md-card-header>
-        <md-card-avatar>
-          <img class="md-user-avatar" src="{{person.profileImg}}">
-        </md-card-avatar>
-        <md-card-header-text>
-          <span class="md-headline">Rank: {{person.rank}}</span>
-          <span class="md-title">{{person.firstName}} {{person.lastName}}</span>
-        </md-card-header-text>
-      </md-card-header>
-      <md-card-content>
-        {{person.profileUrl}}
-      </md-card-content>
+  <div class="main-content-wrapper">
+
+    <md-card class="test-card">
+      <div class="header">
+        <div class="header-content layout-row" layout="row">
+          <div class="info flex" flex>
+            <div class="title">{{testTitle}}</div>
+            <div class="instruction">{{instructions}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="avg">
+        <div class="header-text">Top 5 RX</div>
+        <div class="rx-leaders" ng-repeat="person in people | limitTo: 5">
+          <span>{{person.rx}}</span>
+          <span>{{person.firstName}}</span>
+          <span>{{person.lastName}}</span>
+        </div>
+
+      </div>
     </md-card>
+
+    <div class="md-padding result-card" layout="column" layout-wrap layout-align-xl="center" flex="50">
+      <md-card ng-repeat="person in people" ng-if="tracker <= $index && $index < interval" ng-show="!transition">
+        <md-card-header>
+          <md-card-avatar>
+            <img class="md-user-avatar" src="{{person.profileImg}}">
+          </md-card-avatar>
+          <md-card-header-text>
+            <span class="md-headline">Rank: {{person.rank}}</span>
+            <span class="md-title">{{person.firstName}} {{person.lastName}}</span>
+          </md-card-header-text>
+        </md-card-header>
+        <md-card-content>
+          {{person.profileUrl}}
+        </md-card-content>
+      </md-card>
+    </div>
+
   </div>
 
   <script src="/node_modules/angular/angular.js"></script>

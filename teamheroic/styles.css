@@ -1,4 +1,94 @@
-
-md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar)  {
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
   background-color: #1f242a
+}
+.main-content-wrapper {
+  /*background-color: red;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+]}
+
+.ng-hide{
+  animation: 0.5s zoomOutDown;
+}
+
+.ng-enter{
+  animation: 0.5s zoomIn;
+}
+
+.result-card {
+  width: 500px;
+}
+.summary {
+  justify-content: flex-start;
+}
+.th-leaderboard-test-cards {
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+}
+.test-card {
+  min-height: 175px;
+  width: 300px;
+}
+.test-card .header {
+  min-height: 75px;
+  height: auto;
+  background: #282B30;
+}
+.test-card .header .header-content {
+  width: 200px;
+  margin: 20px auto;
+}
+.test-card .header .header-content .empty-status {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: #FFF;
+  opacity: .9;
+  margin: 0 auto;
+}
+.test-card .header .header-content .info {
+  margin-left: 10px;
+}
+.test-card .header .header-content .info .title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFF;
+}
+.test-card .header .header-content .info .instruction {
+  font-size: 10px;
+  font-weight: 600;
+  color: #FFF;
+  opacity: .5;
+}
+.test-card .body {
+  background: white !important;
+  min-height: 100px;
+}
+.test-card .body .body-content {
+  width: 200px;
+  margin: 10px auto;
+}
+.test-card .body .body-content {
+  width: 98px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: inline-block;
+  text-align: center;
+}
+.test-card .body .body-content .header-text {
+  text-transform: uppercase;
+  font-size: 9px;
+  color: #4A4A4A;
+  opacity: .5;
+}
+.test-card .body .body-content .male-results .value {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: .9;
+}
+.test-card .body .body-content {
+  margin-top: 10px;
 }
