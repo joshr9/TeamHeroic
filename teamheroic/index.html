@@ -9,23 +9,16 @@
   <title>Leaderboard</title>
 </head>
 
-<body ng-app="leaderboard" ng-controller="leaderboardController" layout="column"  ng-cloak>
-<div class="header">
+<body ng-app="leaderboard" ng-controller="leaderboardController" layout="column" ng-cloak>
   <div class="container">
     <md-toolbar>
       <div class="md-toolbar-tools">
         <span class="md-flex">Leader Board</span>
       </div>
     </md-toolbar>
-
   </div>
-</div>
 
-
-<div class="container">
   <div class="main-content-wrapper">
-
-
     <md-card class="test-card" flex="30">
       <div class="header">
         <div class="header-content layout-row" layout="row">
@@ -42,7 +35,6 @@
           <span>{{person.firstName}}</span>
           <span>{{person.lastName}}</span>
         </div>
-
       </div>
     </md-card>
 
@@ -62,10 +54,7 @@
         </md-card-content>
       </md-card>
     </div>
-
-  </div>
 </div>
-
 
   <script src="/node_modules/angular/angular.js"></script>
   <script src="/node_modules/angular-animate/angular-animate.js"></script>
@@ -74,5 +63,4 @@
   <script src="/node_modules/angular-material/angular-material.js"></script>
   <script src="/js/scripts.js"></script>
 </body>
-
 </html>
