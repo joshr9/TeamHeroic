@@ -10,16 +10,23 @@
 </head>
 
 <body ng-app="leaderboard" ng-controller="leaderboardController" layout="column"  ng-cloak>
+<div class="header">
+  <div class="container">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span class="md-flex">Leader Board</span>
+      </div>
+    </md-toolbar>
 
-  <md-toolbar>
-    <div class="md-toolbar-tools">
-      <span class="md-flex">Leader Board</span>
-    </div>
-  </md-toolbar>
+  </div>
+</div>
 
+
+<div class="container">
   <div class="main-content-wrapper">
 
-    <md-card class="test-card">
+
+    <md-card class="test-card" flex="30">
       <div class="header">
         <div class="header-content layout-row" layout="row">
           <div class="info flex" flex>
@@ -39,7 +46,7 @@
       </div>
     </md-card>
 
-    <div class="md-padding result-card" layout="column" layout-wrap layout-align-xl="center" flex="50">
+    <div class="md-padding result-card" layout="column" layout-wrap layout-align-xl="center" flex="33">
       <md-card ng-repeat="person in people" ng-if="tracker <= $index && $index < interval" ng-show="!transition">
         <md-card-header>
           <md-card-avatar>
@@ -57,6 +64,8 @@
     </div>
 
   </div>
+</div>
+
 
   <script src="/node_modules/angular/angular.js"></script>
   <script src="/node_modules/angular-animate/angular-animate.js"></script>

@@ -7,11 +7,29 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
+
 ]}
 
+.header-text {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+.md-headline, .md-title{
+  text-align: justify;
+}
+.rx-leaders {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 20px;
+  /*color: #FFF;*/
+  /*opacity: .9;
+  margin: 0 auto;*/
+}
 .ng-hide{
-  animation: 0.5s zoomOutDown;
+  animation: 0.5s zoomOut;
 }
 
 .ng-enter{
@@ -42,7 +60,7 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
   margin: 20px auto;
 }
 .test-card .header .header-content .empty-status {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 500;
   text-align: center;
   color: #FFF;
@@ -53,12 +71,12 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
   margin-left: 10px;
 }
 .test-card .header .header-content .info .title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   color: #FFF;
 }
 .test-card .header .header-content .info .instruction {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   color: #FFF;
   opacity: .5;
